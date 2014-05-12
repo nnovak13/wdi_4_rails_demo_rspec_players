@@ -1,2 +1,1 @@
-wdi_4_rails_demo_rspec_players
-==============================
+# RSpec Player Tracker Demo
