@@ -8,9 +8,15 @@ class PlayersController < ApplicationController
   end
 
   def create
-    Player.create(player_params)
-    flash[:notice] = 'Player successfully created!'
-    redirect_to root_path
+    @player = Player.new(player_params)
+
+    if @player.save
+      flash[:notice] = 'Player successfully created!'
+      redirect_to root_path
+    else
+      flash.now[:alert] = @player.errors.full_messages.join(', ')
+      render :new
+    end
   end
 
   private
