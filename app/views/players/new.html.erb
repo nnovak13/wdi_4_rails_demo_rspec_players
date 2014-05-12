@@ -7,7 +7,7 @@
   </div>
   <div>
     <%= f.label :job %>
-    <%= f.select :job, %w(Knight Wizard Cleric Rogue), include_blank: true %>
+    <%= f.select :job, Player::JOBS, include_blank: true %>
   </div>
   <div>
     <%= f.label :health %>
