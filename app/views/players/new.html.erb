@@ -1,0 +1,21 @@
+<h1>New Player</h1>
+
+<%= form_for @player do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :job %>
+    <%= f.select :job, %w(Knight Wizard Cleric Rogue) %>
+  </div>
+  <div>
+    <%= f.label :health %>
+    <%= f.text_field :health %>
+  </div>
+  <div>
+    <%= f.label :magic %>
+    <%= f.text_field :magic %>
+  </div>
+  <%= f.submit %>
+<% end %>
