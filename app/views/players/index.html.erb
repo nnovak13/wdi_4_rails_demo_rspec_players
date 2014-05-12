@@ -1,0 +1,18 @@
+<h1>All Players</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Job</th>
+    <th>Health</th>
+    <th>Magic</th>
+  </tr>
+  <% @players.each do |player| %>
+    <tr>
+      <td><%= player.name %></td>
+      <td><%= player.job %></td>
+      <td><%= player.health %></td>
+      <td><%= player.magic %></td>
+    </tr>
+  <% end %>
+</table>
