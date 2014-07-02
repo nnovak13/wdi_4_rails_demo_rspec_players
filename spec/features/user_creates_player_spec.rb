@@ -8,8 +8,9 @@ feature 'User creates a player' do
 #as a user
     #when i navigate to the new character form
     # CASE SENSITIVE for Capybara
-
-    click_link 'Add Player' #expect that this will take us to new character form
+  scenario 'successfully' do
+    other_player = create(:player)
+    # click_link 'Add Player' #expect that this will take us to new character form
     fill_in 'Name', with: 'Mike'
     select 'Wizard', from: 'Job' #select_from 'Job', item: 'wizard'
 
