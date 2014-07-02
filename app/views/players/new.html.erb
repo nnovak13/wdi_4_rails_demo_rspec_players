@@ -1,0 +1,20 @@
+<h1>New Player</h1>
+
+<%= form_for @player do |f| %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %><br><br>
+
+    <%= f.label :job %><br>
+    <%= f.select :job%><br><br>
+
+    <%= f.label :health %><br>
+    <%= f.text_area :health %><br><br>
+
+    <%= f.label :magic %><br>
+    <%= f.text_area :magic %><br><br>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

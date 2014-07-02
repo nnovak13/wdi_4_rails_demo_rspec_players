@@ -1,0 +1,14 @@
+<table>
+     <% @players.each do |player|%>
+      <tr class="player">
+        <td class="name"><%= player.name %></td>
+        <td class="job"><%= player.job %></td>
+        <td class="health"><%= player.health %></td>
+        <td class="magic"><%= player.magic %></td>
+      </tr>
+    <%end%>
+
+    </table>
+
+
+<%= link_to 'Add Player', new_player_path %>
